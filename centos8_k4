@@ -1,0 +1,24 @@
+CentOS 8
+kernel: 4.18.0-305.12.1.el8_4.x86_64
+
+[root@localhost dahdi-linux-complete-3.1.0+3.1.0]# make all
+make -C linux all
+make[1]: Entering directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux'
+make -C drivers/dahdi/firmware firmware-loaders
+make[2]: Entering directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware'
+make[2]: Leaving directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware'
+make -C /lib/modules/4.18.0-305.12.1.el8_4.x86_64/build KBUILD_EXTMOD=/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi DAHDI_INCLUDE=/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/include DAHDI_MODULES_EXTRA=" " HOTPLUG_FIRMWARE=yes modules DAHDI_BUILD_ALL=m
+make[2]: Entering directory '/usr/src/kernels/4.18.0-305.12.1.el8_4.x86_64'
+  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/oct612x-user.o
+In file included from /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/oct612x-user.c:28:
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/include/dahdi/kernel.h:65:10: fatal error: linux/pci-aspm.h: No such file or directory
+ #include <linux/pci-aspm.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [scripts/Makefile.build:316: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/oct612x-user.o] Error 1
+make[3]: *** [scripts/Makefile.build:556: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x] Error 2
+make[2]: *** [Makefile:1563: _module_/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi] Error 2
+make[2]: Leaving directory '/usr/src/kernels/4.18.0-305.12.1.el8_4.x86_64'
+make[1]: *** [Makefile:74: modules] Error 2
+make[1]: Leaving directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux'
+make: *** [Makefile:9: all] Error 2
