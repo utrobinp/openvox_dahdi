@@ -1,0 +1,33 @@
+Ubuntu Server 21.04
+kernel: 5.11.0-31-generic
+
+Error:
+ CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.o
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: In function ‘create_param_proc’:
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1235:40: error: passing argument 4 of ‘proc_create_data’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+ 1235 |     proc_create_data(name, 0444, base, &proc_param_fops, data);
+      |                                        ^~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        struct file_operations *
+In file included from /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:33:
+./include/linux/proc_fs.h:106:13: note: expected ‘const struct proc_ops *’ but argument is of type ‘struct file_operations *’
+  106 |             const struct proc_ops *,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: In function ‘create_param_off_proc’:
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1321:40: error: passing argument 4 of ‘proc_create_data’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+ 1321 |     proc_create_data(name, 0644, base, &proc_param_off_fops, data);
+      |                                        ^~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        struct file_operations *
+In file included from /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:33:
+./include/linux/proc_fs.h:106:13: note: expected ‘const struct proc_ops *’ but argument is of type ‘struct file_operations *’
+  106 |             const struct proc_ops *,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[4]: *** [scripts/Makefile.build:287: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.o] Error 1
+make[3]: *** [scripts/Makefile.build:518: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx] Error 2
+make[2]: *** [Makefile:1848: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi] Error 2
+make[2]: Leaving directory '/usr/src/linux-headers-5.11.0-31-generic'
+make[1]: *** [Makefile:74: modules] Error 2
+make[1]: Leaving directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux'
+make: *** [Makefile:9: all] Error 2
