@@ -3,79 +3,34 @@ kernel: 5.13.13
 
 [root@localhost dahdi-linux-complete-3.1.0+3.1.0]# make all
 make -C linux all
-make[1]: вход в каталог «/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux»
+make[1]: Entering directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux'
 make -C drivers/dahdi/firmware firmware-loaders
-make[2]: вход в каталог «/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware»
-make[2]: выход из каталога «/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware»
+make[2]: Entering directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware'
+make[2]: Leaving directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/firmware'
 make -C /lib/modules/5.13.13/build KBUILD_EXTMOD=/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi DAHDI_INCLUDE=/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/include DAHDI_MODULES_EXTRA=" " HOTPLUG_FIRMWARE=yes modules DAHDI_BUILD_ALL=m
-make[2]: вход в каталог «/usr/src/linux-5.13.13»
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_adpcm_chan.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_channel.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_chip_open.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_chip_stats.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_conf_bridge.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_debug.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_events.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_interrupts.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_memory.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_miscellaneous.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_mixer.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_phasing_tsst.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_playout_buf.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_remote_debug.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_tlv.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_tone_detection.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_tsi_cnct.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/octdeviceapi/oct6100api/oct6100_api/oct6100_tsst.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/apilib/bt/octapi_bt0.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/apilib/largmath/octapi_largmath.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/apilib/llman/octapi_llman.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/oct612x-user.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/oct612x/oct612x.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wct4xxp/base.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wct4xxp/vpm450m.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wct4xxp/wct4xxp.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/base.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/wcb4xxp.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/opvx_lib.o
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/opvx_lib.c: В функции «OPVOS_MutexLockInterruptible»:
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/opvx_lib.c:18:3: предупреждение: результат «down_interruptible», декларированной с атрибутом warn_unused_result, игнорируется [-Wunused-result]
-   down_interruptible(*mutex);
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/hfcopvx.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/wcb4xxp/opvxec.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/zaphfc/base.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/zaphfc/fifo.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/zaphfc/zaphfc.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa1200/base.o
-  LD [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa1200/opvxa1200.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/private.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/a24xx.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/si321x.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/si3050.o
-  CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/ec3000.o
+make[2]: Entering directory '/usr/src/linux-5.13.13'
   CC [M]  /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.o
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: В функции «create_param_proc»:
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1235:40: ошибка: в передаче аргумента 4 «proc_create_data»: несовместимый тип указателя [-Werror=incompatible-pointer-types]
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: In function ‘create_param_proc’:
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1235:40: error: passing argument 4 of ‘proc_create_data’ from incompatible pointer type [-Werror=incompatible-pointer-types]
      proc_create_data(name, 0444, base, &proc_param_fops, data);
                                         ^~~~~~~~~~~~~~~~
 In file included from /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:33:
-./include/linux/proc_fs.h:105:31: замечание: ожидался тип «const struct proc_ops *», но аргумент имеет тип «struct file_operations *»
+./include/linux/proc_fs.h:105:31: note: expected ‘const struct proc_ops *’ but argument is of type ‘struct file_operations *’
  extern struct proc_dir_entry *proc_create_data(const char *, umode_t,
                                ^~~~~~~~~~~~~~~~
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: В функции «create_param_off_proc»:
-/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1321:40: ошибка: в передаче аргумента 4 «proc_create_data»: несовместимый тип указателя [-Werror=incompatible-pointer-types]
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c: In function ‘create_param_off_proc’:
+/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:1321:40: error: passing argument 4 of ‘proc_create_data’ from incompatible pointer type [-Werror=incompatible-pointer-types]
      proc_create_data(name, 0644, base, &proc_param_off_fops, data);
                                         ^~~~~~~~~~~~~~~~~~~~
 In file included from /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.c:33:
-./include/linux/proc_fs.h:105:31: замечание: ожидался тип «const struct proc_ops *», но аргумент имеет тип «struct file_operations *»
+./include/linux/proc_fs.h:105:31: note: expected ‘const struct proc_ops *’ but argument is of type ‘struct file_operations *’
  extern struct proc_dir_entry *proc_create_data(const char *, umode_t,
                                ^~~~~~~~~~~~~~~~
-cc1: некоторые предупреждения считаются ошибками
-make[4]: *** [scripts/Makefile.build:273: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.o] Ошибка 1
-make[3]: *** [scripts/Makefile.build:516: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx] Ошибка 2
-make[2]: *** [Makefile:1862: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi] Ошибка 2
-make[2]: выход из каталога «/usr/src/linux-5.13.13»
-make[1]: *** [Makefile:74: modules] Ошибка 2
-make[1]: выход из каталога «/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux»
-make: *** [Makefile:9: all] Ошибка 2
+cc1: some warnings being treated as errors
+make[4]: *** [scripts/Makefile.build:273: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx/callerid.o] Error 1
+make[3]: *** [scripts/Makefile.build:516: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi/opvxa24xx] Error 2
+make[2]: *** [Makefile:1862: /usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux/drivers/dahdi] Error 2
+make[2]: Leaving directory '/usr/src/linux-5.13.13'
+make[1]: *** [Makefile:74: modules] Error 2
+make[1]: Leaving directory '/usr/src/dahdi-linux-complete-3.1.0+3.1.0/linux'
+make: *** [Makefile:9: all] Error 2
